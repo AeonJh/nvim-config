@@ -10,14 +10,12 @@ return {
   --   end,
   -- },
   "Pocco81/auto-save.nvim",
-  {
-    name = "auto-save",
-    event = "InsertEnter",
-	  config = function()
-		   require("auto-save").setup {
-			  -- your config goes here
-			  -- or just leave it empty :)
-		   }
-	  end,
-  },
+  name = "auto-save",
+  event = {"InsertLeave", "TextChanged"},
+	config = function()
+		 require("auto-save").setup {
+			-- your config goes here
+			-- or just leave it empty :)
+		 }
+	end,
 }
