@@ -8,7 +8,7 @@ return {
     },
     keys = {
       {
-        "<leader>fwa",
+        "<leader>fA",
         "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
         desc = "live_grep_args (root dir)",
       },
