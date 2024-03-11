@@ -31,9 +31,19 @@ return {
         desc = "CopilotChat - Toggle Vsplit", -- Toggle vertical split
       },
       {
+        "<leader>cci",
+        function()
+          local input = vim.fn.input("Ask Copilot: ")
+          if input ~= "" then
+            vim.cmd("CopilotChat " .. input)
+          end
+        end,
+        desc = "CopilotChat - Ask input",
+      },
+      {
         "<leader>ccv",
         ":CopilotChatVisual ",
-        mode = "x",
+        -- mode = "x",
         desc = "CopilotChat - Open in vertical split",
       },
       {

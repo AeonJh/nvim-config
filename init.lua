@@ -52,6 +52,11 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      clangd = {
+        capabilities = { offsetEncoding = "utf-8" } -- resolve warning: multiple different client offset_encodings detected for buffer, this is not supported yet
+      }
+    },
   },
 
   -- Configure require("lazy").setup() options
