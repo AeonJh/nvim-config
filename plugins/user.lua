@@ -12,7 +12,10 @@ return {
   {
     "Pocco81/auto-save.nvim",
     name = "auto-save",
-    event = {"InsertLeave", "TextChanged"},
+    event = {"InsertLeave"},
+		keys = {
+      { "<leader>N", ":ASToggle<CR>", desc = "Toggle auto-save" },
+    },
 	  config = function()
 		   require("auto-save").setup {
 			  -- your config goes here
