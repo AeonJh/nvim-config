@@ -49,12 +49,13 @@ return {
       {
         "<leader>ccx",
         ":CopilotChatInPlace<cr>",
-        mode = "x",
+        mode = "x", -- visual mode
         desc = "CopilotChat - Run in-place code",
       },
       {
         "<leader>ccf",
         "<cmd>CopilotChatFixDiagnostic<cr>", -- Get a fix for the diagnostic message under the cursor.
+        mode = {"n", "x"},
         desc = "CopilotChat - Fix diagnostic",
       },
       {

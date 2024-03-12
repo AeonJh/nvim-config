@@ -1,3 +1,5 @@
+vim.g.python3_host_prog = "/usr/bin/python3.12"
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -17,9 +19,11 @@ return {
     },
   },
 
+  -- for now, it's invalid for me, so I just put it in top
+  -- set vim options here (vim.<first_key>.<second_key> =  value) 
   options = {
     g = {
-      python3_host_prog = "/usr/bin/python3.12",
+      python3_host_prog = "/usr/bin/python3.12", --sets vim.g.python3_host_prog
     },
   },
 
