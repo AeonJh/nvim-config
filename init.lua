@@ -4,7 +4,7 @@ return {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
+    channel = "nightly", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "nightly", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -19,13 +19,13 @@ return {
     },
   },
 
-  -- for now, it's invalid for me, so I just put it in top
   -- set vim options here (vim.<first_key>.<second_key> =  value) 
-  options = {
-    g = {
-      python3_host_prog = "/usr/bin/python3.12", --sets vim.g.python3_host_prog
-    },
-  },
+  options = function(local_vim)
+    local_vim.g.python3_host_prog = "/usr/bin/python3.12" --sets vim.g.python3_host_prog
+    local_vim.g.clipboard = "tmux"
+    -- local_vim.g.loaded_remote_plugins = nil
+    return local_vim
+  end,
 
   -- Set colorscheme to use
   colorscheme = "catppuccin-mocha",
